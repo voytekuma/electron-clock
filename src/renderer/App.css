@@ -13,7 +13,7 @@ body {
 .clock-widget {
   background: #23272f;
   border-radius: 16px;
-  box-shadow: 0 4px 32px rgsa(0, 0, 0, 0.7);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.7);
   padding: 32px 48px;
   display: flex;
   flex-direction: column;
