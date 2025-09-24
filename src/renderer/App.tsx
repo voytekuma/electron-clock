@@ -13,9 +13,27 @@ function Clock() {
     return () => clearInterval(timer);
   }, []);
 
+  const formatTime = (date: Date): string => {
+    return date.toLocaleTimeString('ja-JP', {
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+    });
+  };
+
+  const formatDate = (date: Date): string => {
+    return date.toLocaleDateString('ja-JP',{
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      weekday: 'long',
+    });
+  };
+
   return (
     <div>
-      <h1>{time.toLocaleTimeString()}</h1>
+      <p>{formatDate(time)}</p>
+      <h1>{formatTime(time)}</h1>
     </div>
   );
 }
