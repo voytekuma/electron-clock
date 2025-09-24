@@ -22,7 +22,7 @@ function Clock() {
   };
 
   const formatDate = (date: Date): string => {
-    return date.toLocaleDateString('ja-JP',{
+    return date.toLocaleDateString('ja-JP', {
       year: 'numeric',
       month: 'long',
       day: 'numeric',
@@ -31,9 +31,9 @@ function Clock() {
   };
 
   return (
-    <div>
-      <p>{formatDate(time)}</p>
-      <h1>{formatTime(time)}</h1>
+    <div className="clock-widget">
+      <p className="clock-date">{formatDate(time)}</p>
+      <h1 className="clock-time">{formatTime(time)}</h1>
     </div>
   );
 }
