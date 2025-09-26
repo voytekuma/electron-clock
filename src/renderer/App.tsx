@@ -1,6 +1,7 @@
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import AnalogClock from './AnalogClock';
 
 function Clock() {
   const [time, setTime] = useState<Date>(new Date());
@@ -34,6 +35,7 @@ function Clock() {
     <div className="clock-widget">
       <p className="clock-date">{formatDate(time)}</p>
       <h1 className="clock-time">{formatTime(time)}</h1>
+      <AnalogClock />
     </div>
   );
 }
